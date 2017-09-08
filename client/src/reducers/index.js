@@ -1,9 +1,8 @@
-export default function (state = null, action) {
+import { combineReducers } from 'redux';
+import weatherReducer from './weatherReducer';
 
-    switch (action.type) {
-        case 'FETCH_ALBUMS':
-            return action.payload || false;
-        default:
-            return state;
-    }
-}
+const rootReducer = combineReducers({
+    weather: weatherReducer
+});
+
+export default rootReducer
