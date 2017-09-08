@@ -1,13 +1,13 @@
 const express = require('express'),
-    port = process.env.PORT || 3423,
+    config = require('./config/config'),
     app = express();
 
-require('./middleware/middleware');
-require('./routes/getWeatherData');
+require('./middleware/middleware')(app);
+require('./routes/getWeatherData')(app);
 
 app.use(express.static(__dirname + '/client'));
 
 
-app.listen(port, () => {
-    console.log(`listening on port ${port}`);
+app.listen(config.port, () => {
+    console.log(`listening on port ${config.port}`);
 })

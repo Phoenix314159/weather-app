@@ -4,15 +4,17 @@
   "private": true,
   "proxy": {
     "/api/*": {
-     "target": "http://localhost:3423"
+      "target": "http://localhost:3456"
     }
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "bootstrap": "^3.3.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
