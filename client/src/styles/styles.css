@@ -1,3 +1,17 @@
+body {
+    background-image: url('../imgs/sky-2.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.background {
+    background-color: whitesmoke;
+    border: 3px solid black;
+    border-radius: 7pt;
+    margin-top: 20px;
+}
+
 td, th {
     vertical-align: middle !important;
     text-align: center !important;
@@ -10,4 +24,7 @@ td, th {
 td:first-of-type, td:first-of-type > div {
     height: 200px;
     width: 250px;
+}
+.header1 {
+    text-align: center;
 }
