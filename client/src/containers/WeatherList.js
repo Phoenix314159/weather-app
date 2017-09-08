@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Chart from '../components/Chart';
 import Map from '../components/Map';
 import DeleteRow from './DeleteRow';
+import {connect} from 'react-redux';
 
 
 class WeatherList extends Component {
@@ -10,21 +11,15 @@ class WeatherList extends Component {
         super(props);
         this.renderWeather = this.renderWeather.bind(this);
         this.state = {
-            something: []
+            tableRow: []
         }
     }
 
     renderWeather(cityData, index) {
 
         let deleteRow = (i) => {
-                if (i === 0) {
-                    this.setState({
-                        something: this.props.weather.splice(0, i + 1)
-                    })
-                    return;
-                }
                 this.setState({
-                    something: this.props.weather.splice(0, i)
+                    tableRow: this.props.weather.splice(i, 1)
                 })
             },
             convert = (temp) => {
@@ -34,7 +29,7 @@ class WeatherList extends Component {
                 return _.round(_.sum(data) / data.length)
             };
         const
-        name = cityData.city.name,
+            name = cityData.city.name,
             temp = cityData.list.map(weather => weather.main.temp),
             humidity = cityData.list.map(weather => weather.main.humidity),
             pressure = cityData.list.map(weather => weather.main.pressure),
@@ -76,4 +71,4 @@ const mapStateToProps = ({weather}) => {
     return {weather};
 }
 
-export default mapStateToProps;
+export default connect(mapStateToProps)(WeatherList);
