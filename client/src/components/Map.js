@@ -8,17 +8,9 @@ export default class Map extends Component {
                 center: {lat: this.props.lat, lng: this.props.lon},
                 zoom: 12
             });
-            // new window.google.InfoWindow({
-            //     content: `${this.props.city}`,
-            // })
-            new window.google.maps.Marker({
-                position: map.center,
-                map: map,
+            new window.google.maps.Marker(document.getElementById('map'),{
+                position: map.center
             });
-            // marker.addListener('click', () => {
-            //     infoWindow.open(map, marker);
-            // });
-
         })();
     }
 
