@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/App.css';
+import '../styles/css/App.css';
 import SearchBar from '../containers/SearchBar';
 import WeatherList from '../containers/WeatherList'
 

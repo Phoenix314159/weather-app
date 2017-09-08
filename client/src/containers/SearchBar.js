@@ -31,12 +31,6 @@ class SearchBar extends Component {
                         value={this.state.term}
                         onChange={this.onInputChange}
                     />
-
-
-
-                {/*<span className="input-group-btn">*/}
-                {/*<button type="submit" className="btn btn-secondary">Submit</button>*/}
-                {/*</span>*/}
             </form>
         )
     }

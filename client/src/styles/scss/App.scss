@@ -1,0 +1,27 @@
+@import './SearchBar.scss';
+@import './WeatherList.scss';
+
+body {
+  background-image: url('../../imgs/sky-2.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Anton', sans-serif;
+}
+
+.background {
+  background-color: whitesmoke;
+  border: 3px solid black;
+  border-radius: 7pt;
+  margin-top: 20px;
+
+  padding: 15px;
+
+  box-shadow: 10px 10px;
+}
+
+.header {
+  text-align: center;
+}
+

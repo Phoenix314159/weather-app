@@ -22,7 +22,7 @@ class WeatherList extends Component {
 
         return (
             <tr key={name}>
-                <td><Map lon={lon} lat={lat}/></td>
+                <td><Map lon={lon} lat={lat} city={name}/></td>
                 <td><Chart data={temps} color="orange" average={`${calcAvg(temps).toString()}°`} /></td>
                 <td><Chart data={pressure} color="blue" average={`${calcAvg(pressure).toString()}mB`} /></td>
                 <td><Chart data={humidity} color="red" average={`${calcAvg(humidity).toString()}%`} /></td>
