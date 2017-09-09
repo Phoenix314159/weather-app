@@ -39,9 +39,9 @@ class WeatherList extends Component {
         return (
             <tr key={name}>
                 <td><Map lon={lon} lat={lat} city={name}/></td>
-                <td className="animated flipInY"><Chart data={temps} color="orange" average={`${calcAvg(temps).toString()}°`}/></td>
+                <td className="animated fadeIn"><Chart data={temps} color="orange" average={`${calcAvg(temps).toString()}°`}/></td>
                 <td className="animated flipInX"><Chart data={pressure} color="blue" average={`${calcAvg(pressure).toString()}mB`}/></td>
-                <td className="animated wobble"><Chart data={humidity} color="green" average={`${calcAvg(humidity).toString()}%`}/></td>
+                <td className="animated wobble lastGraph"><Chart data={humidity} color="green" average={`${calcAvg(humidity).toString()}%`}/></td>
                 <DeleteRow delete={deleteRow} index={index}/>
             </tr>
         )

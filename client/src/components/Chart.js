@@ -5,12 +5,12 @@ export default props => {
 
     return (
         <div className="box">
-            <Sparklines className="spark" data={props.data} >
+            <Sparklines svgHeight={120} svgWidth={180} data={props.data} >
                 <SparklinesLine color={props.color} style={{fill: "none"}}/>
-                <SparklinesBars style={{stroke: "white", fill: "#41c3f9", fillOpacity: ".25"}}/>
+                <SparklinesBars style={{stroke: "white", fill: "black", fillOpacity: ".25"}}/>
                 <SparklinesReferenceLine type="avg"/>
             </Sparklines>
-            <div>Average: {props.average}</div>
+            <div className="averageText">Average: {props.average}</div>
         </div>
     )
 }

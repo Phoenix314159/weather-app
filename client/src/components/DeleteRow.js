@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DeleteRow = (props) => {
+const DeleteRow = props => {
 
     this.renderLastRow = () => {
         return (

@@ -15,6 +15,6 @@ export default class Map extends Component {
     }
 
     render() {
-        return <div id="map" className="animated lightSpeedIn box"></div>
+        return <div id="map" className="animated lightSpeedIn box3"></div>
     }
 }
