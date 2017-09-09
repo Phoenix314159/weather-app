@@ -8,13 +8,13 @@ export default class Map extends Component {
                 center: {lat: this.props.lat, lng: this.props.lon},
                 zoom: 12
             });
-            new window.google.maps.Marker(document.getElementById('map'),{
+            new window.google.maps.Marker({
                 position: map.center
             });
         })();
     }
 
     render() {
-        return <div id="map"></div>
+        return <div id="map" className="animated lightSpeedIn box"></div>
     }
 }

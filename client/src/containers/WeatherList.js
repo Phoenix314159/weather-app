@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, {Component} from 'react';
 import Chart from '../components/Chart';
 import Map from '../components/Map';
-import DeleteRow from './DeleteRow';
+import DeleteRow from '../components/DeleteRow';
 import {connect} from 'react-redux';
 
 
@@ -39,9 +39,9 @@ class WeatherList extends Component {
         return (
             <tr key={name}>
                 <td><Map lon={lon} lat={lat} city={name}/></td>
-                <td><Chart data={temps} color="orange" average={`${calcAvg(temps).toString()}°`}/></td>
-                <td><Chart data={pressure} color="blue" average={`${calcAvg(pressure).toString()}mB`}/></td>
-                <td><Chart data={humidity} color="green" average={`${calcAvg(humidity).toString()}%`}/></td>
+                <td className="animated flipInY"><Chart data={temps} color="orange" average={`${calcAvg(temps).toString()}°`}/></td>
+                <td className="animated flipInX"><Chart data={pressure} color="blue" average={`${calcAvg(pressure).toString()}mB`}/></td>
+                <td className="animated wobble"><Chart data={humidity} color="green" average={`${calcAvg(humidity).toString()}%`}/></td>
                 <DeleteRow delete={deleteRow} index={index}/>
             </tr>
         )
@@ -52,10 +52,10 @@ class WeatherList extends Component {
             <table className="table table-hover" id="table1">
                 <thead>
                     <tr className="rowFont">
-                        <th>City</th>
-                        <th>Temperature (°)</th>
-                        <th>Pressure (mBar)</th>
-                        <th>Humidity (%)</th>
+                        <th className="animated slideInLeft">City</th>
+                        <th className="animated slideInLeft">Temperature (°)</th>
+                        <th className="animated slideInRight">Pressure (mBar)</th>
+                        <th className="animated slideInRight">Humidity (%)</th>
                         <th></th>
                     </tr>
                 </thead>

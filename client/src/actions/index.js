@@ -9,9 +9,4 @@ export function fetchWeatherData(city) {
     }
 }
 
-export function deleteRow() {
-    return {
-        type: types.DELETE_ROW,
-        payload: null
-    }
-}
+
