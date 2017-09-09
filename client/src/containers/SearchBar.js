@@ -24,13 +24,12 @@ class SearchBar extends Component {
     render() {
         return (
             <form onSubmit={this.onFormSubmit} className="input-group">
-
-                    <input
-                        placeholder="Enter a city name"
-                        className="form-control centerInput"
-                        value={this.state.term}
-                        onChange={this.onInputChange}
-                    />
+                <input
+                    placeholder="Enter a city name"
+                    className="form-control centerInput"
+                    value={this.state.term}
+                    onChange={this.onInputChange}
+                />
             </form>
         )
     }

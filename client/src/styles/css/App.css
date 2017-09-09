@@ -6,42 +6,20 @@
   position: relative;
   left: 25vw; }
 
-td, th {
-  vertical-align: middle !important;
-  text-align: center !important; }
-
-td:first-of-type, td:first-of-type > div {
-  height: 200px;
-  width: 250px; }
-
-.rowFont {
-  font-size: 1.3em; }
-
-body {
-  background-image: url("../../imgs/sky-2.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  font-family: 'Anton', sans-serif; }
-
-.averageText {
-  color: black; }
-
-.background {
-  background-color: whitesmoke;
-  border: 4px solid black;
-  border-radius: 8pt;
-  margin-top: 40px;
-  padding: 15px;
-  box-shadow: 10px 10px; }
-
 .header {
+  text-align: center; }
+
+.header2 {
+  font-family: 'Roboto Slab', serif;
   text-align: center; }
 
 .box3 {
   border: 2px solid black;
   border-radius: 8pt; }
+
+.averageText {
+  color: black;
+  font-family: 'Yanone Kaffeesatz', sans-serif; }
 
 .box:hover > .spark:hover {
   -webkit-transform: scale(1.3);
@@ -57,7 +35,7 @@ body {
 .box4:hover > .spark:hover {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
-  transform: s scale(1.3);
+  transform: scale(1.3);
   background-color: white;
   border: 2px solid black;
   border-radius: 8pt; }
@@ -79,6 +57,36 @@ body {
 .box5:hover ~ td > .button1 {
   visibility: hidden; }
 
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important; }
+
+td:first-of-type > div, td:first-of-type > div {
+  height: 220px;
+  width: 275px; }
+
+.rowFont {
+  font-size: 1.5em; }
+
+.mapBox {
+  width: 14vw; }
+
+body {
+  background-image: url("../../imgs/sky-2.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Anton', sans-serif; }
+
+.background {
+  background-color: whitesmoke;
+  border: 4px solid black;
+  border-radius: 8pt;
+  margin-top: 40px;
+  padding: 15px;
+  box-shadow: 10px 10px; }
+
 @media only screen and (max-width: 1440px) {
   .centerInput {
     position: relative;
@@ -87,7 +95,7 @@ body {
 @media only screen and (max-width: 1024px) {
   .background {
     width: 86vw; }
-  td:first-of-type, td:first-of-type > div {
+  td:first-of-type > div, td:first-of-type > div {
     height: 160px;
     width: 200px; }
   .box:hover {
