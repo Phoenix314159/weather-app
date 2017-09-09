@@ -37,11 +37,11 @@ class WeatherList extends Component {
             {lon, lat} = cityData.city.coord;
 
         return (
-            <tr key={name}>
+            <tr key={name} className="animated zoomIn">
                 <td><Map lon={lon} lat={lat} city={name}/></td>
-                <td className="animated fadeIn"><Chart data={temps} color="orange" average={`${calcAvg(temps).toString()}°`}/></td>
-                <td className="animated flipInX"><Chart data={pressure} color="blue" average={`${calcAvg(pressure).toString()}mB`}/></td>
-                <td className="animated wobble lastGraph"><Chart data={humidity} color="green" average={`${calcAvg(humidity).toString()}%`}/></td>
+                <td className="animated fadeIn box"><Chart data={temps} color="orange" average={`${calcAvg(temps).toString()}°`}/></td>
+                <td className="animated flipInX box4"><Chart data={pressure} color="blue" average={`${calcAvg(pressure).toString()}mB`}/></td>
+                <td className="animated wobble box5"><Chart data={humidity} color="green" average={`${calcAvg(humidity).toString()}%`}/></td>
                 <DeleteRow delete={deleteRow} index={index}/>
             </tr>
         )

@@ -4,7 +4,7 @@ const DeleteRow = props => {
 
     this.renderLastRow = () => {
         return (
-            <button className="animated fadeIn btn btn-danger"
+            <button className="animated fadeIn btn btn-danger button1"
                     onClick={() => {props.delete(props.index)}}>
                 X</button>
         )
