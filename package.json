@@ -1,10 +1,8 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm run start --prefix client",
@@ -14,19 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/Phoenix314159/weather-app.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Phoenix314159/weather-app/issues"
-  },
-  "homepage": "https://github.com/Phoenix314159/weather-app#readme",
+
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "concurrently": "^3.5.0",
-    "cors": "^2.8.4",
-    "express": "^4.15.4",
-    "react-chartjs": "^0.8.0"
+    "express": "^4.15.4"
   }
 }
