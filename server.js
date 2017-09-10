@@ -5,7 +5,7 @@ const express = require('express'),
 require('./middleware/middleware')(app);
 require('./routes/getWeatherData')(app);
 
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/build'));
 
 
 app.listen(config.port, () => {
