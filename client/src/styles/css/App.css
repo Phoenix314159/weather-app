@@ -79,6 +79,10 @@ body {
   background-size: cover;
   font-family: 'Anton', sans-serif; }
 
+.tempBox {
+  svgHeight: 150;
+  svgWidth: 180; }
+
 .background {
   background-color: whitesmoke;
   border: 4px solid black;
@@ -102,3 +106,22 @@ body {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2); } }
+
+@media only screen and (max-width: 768px) {
+  .background {
+    width: 113%; }
+  .table {
+    position: relative;
+    right: 1.5vw; }
+  .centerInput {
+    position: relative;
+    left: 43vw; }
+  .background .header {
+    font-size: 1.8em; }
+  .background .header2 {
+    font-size: 1.1em; }
+  .background .rowFont {
+    font-size: 1.1em; }
+  .tempBox {
+    svgHeight: 110;
+    svgWidth: 132; } }

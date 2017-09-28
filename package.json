@@ -12,11 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/Phoenix314159/weather-app.git"
   },
-
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "concurrently": "^3.5.0",
+    "cors": "^2.8.4",
     "express": "^4.15.4"
   }
 }

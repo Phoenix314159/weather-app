@@ -1,0 +1,57 @@
+.box3 {
+  border: 2px solid black;
+  border-radius: 8pt; }
+
+.averageText {
+  color: black;
+  font-family: 'Yanone Kaffeesatz', sans-serif; }
+
+.box:hover > .spark:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8pt; }
+  .box:hover > .spark:hover .averageText {
+    color: orange;
+    font-size: 1.5em; }
+
+.box4:hover > .spark:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8pt; }
+  .box4:hover > .spark:hover .averageText {
+    color: blue;
+    font-size: 1.5em; }
+
+.box5:hover > .spark:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8pt; }
+  .box5:hover > .spark:hover .averageText {
+    color: green;
+    font-size: 1.5em; }
+
+.box5:hover ~ td > .button1 {
+  visibility: hidden; }
+
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important; }
+
+td:first-of-type > div, td:first-of-type > div {
+  height: 220px;
+  width: 275px; }
+
+.rowFont {
+  font-size: 1.5em; }
+
+.mapBox {
+  width: 14vw; }
