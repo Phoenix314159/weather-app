@@ -1,20 +1,33 @@
 import React, {Component} from 'react';
+import api_key from '../config';
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
-export default class Map extends Component {
-
-    componentDidMount() {
-        (() => {
-            let map = new window.google.maps.Map(document.getElementById('map'), {
-                center: {lat: this.props.lat, lng: this.props.lon},
-                zoom: 12
-            });
-            new window.google.maps.Marker({
-                position: map.center
-            });
-        })();
-    }
-
+export class MapContainer extends Component {
     render() {
-        return <div id="map" className="animated lightSpeedIn box3"></div>
+        const style = {
+            height: '220px',
+            width: '275px',
+            border: '2px solid black',
+            borderRadius: '8pt'
+        }
+        return (
+            <Map google={this.props.google}
+                 zoom={12}
+                 className="animated lightSpeedIn"
+                 style={style}
+                 initialCenter={{
+                     lat: this.props.lat,
+                     lng: this.props.lon
+                 }}
+            >
+                <Marker
+                    position={{lat: this.props.lat, lng: this.props.lon}}/>
+            </Map>
+        );
     }
 }
+
+export default GoogleApiWrapper({
+    apiKey: api_key
+})(MapContainer)
+

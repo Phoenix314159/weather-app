@@ -5,15 +5,13 @@ import Map from '../components/Map';
 import Thead from '../components/T-head';
 import DeleteRow from '../components/DeleteRow';
 import {connect} from 'react-redux';
+import {deleteRow} from '../actions'
 
 class WeatherList extends Component {
     constructor(props) {
         super(props);
         this.renderHead = this.renderHead.bind(this);
         this.renderBody = this.renderBody.bind(this);
-        this.state = {
-            tableRow: []
-        }
     }
 
     renderHead() {
@@ -26,10 +24,8 @@ class WeatherList extends Component {
 
     renderBody(cityData, index) {
 
-        const deleteRow = i => {
-                this.setState({
-                    tableRow: this.props.weather.splice(i, 1)
-                })
+        const deleteRow = index => {
+                this.props.deleteRow(index);
             },
             convert = temp => {
                 return ((9 / 5) * (temp - 273) + 32); // convert K to F
@@ -47,11 +43,11 @@ class WeatherList extends Component {
         return (
             <tr key={name} className="animated zoomIn">
                 <td className="mapBox"><Map lon={lon} lat={lat} city={name}/></td>
-                <td className="animated fadeIn box"><Chart data={temps} color="orange"
+                <td className="animated fadeIn box1"><Chart data={temps} color="orange"
                                                            average={`${calcAvg(temps).toString()}°`}/></td>
-                <td className="animated flipInX box4"><Chart data={pressure} color="blue"
+                <td className="animated flipInX box2"><Chart data={pressure} color="blue"
                                                              average={`${calcAvg(pressure).toString()}mB`}/></td>
-                <td className="animated wobble box5"><Chart data={humidity} color="green"
+                <td className="animated flipInY box3"><Chart data={humidity} color="green"
                                                             average={`${calcAvg(humidity).toString()}%`}/></td>
                 <DeleteRow delete={deleteRow} index={index}/>
             </tr>
@@ -75,5 +71,10 @@ class WeatherList extends Component {
 const mapStateToProps = ({weather}) => {
     return {weather};
 }
+const mapDispatchToProps = dispatch => {
+    return {
+        deleteRow: index => dispatch(deleteRow(index))
+    };
+};
 
-export default connect(mapStateToProps)(WeatherList);
+export default connect(mapStateToProps, mapDispatchToProps)(WeatherList);

@@ -4,17 +4,12 @@ $border: 2px solid black;
 $white: white;
 $font: 1.5em;
 
-.box3 {
-  border: $border;
-  border-radius: $radius;
-}
-
 .averageText {
   color: black;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.box:hover {
+.box1:hover {
   > .spark:hover {
     -webkit-transform: $scale;
     -ms-transform: $scale;
@@ -29,7 +24,7 @@ $font: 1.5em;
   }
 }
 
-.box4:hover {
+.box2:hover {
   > .spark:hover {
     -webkit-transform: $scale;
     -ms-transform: $scale;
@@ -44,7 +39,7 @@ $font: 1.5em;
   }
 }
 
-.box5:hover {
+.box3:hover {
   > .spark:hover {
     -webkit-transform: $scale;
     -ms-transform: $scale;
@@ -79,10 +74,16 @@ td:first-of-type, td:first-of-type {
 .rowFont {
   font-size: 1.5em;
 }
-
 .mapBox {
-  width: 14vw;
+  display:flex;
+  justify-content: center;
+  div:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
 }
+
 
 
 
