@@ -1,4 +1,4 @@
-import { types } from './types';
+import {types} from './types';
 import axios from 'axios';
 
 export const fetchWeatherData = city => async dispatch => {
@@ -7,14 +7,14 @@ export const fetchWeatherData = city => async dispatch => {
         type: types.FETCH_WEATHER,
         payload: request
     })
-}
+};
 
 export const deleteRow = index => dispatch => {
     return dispatch({
         type: types.DELETE_ROW,
         payload: index
     })
-}
+};
 
 
 
