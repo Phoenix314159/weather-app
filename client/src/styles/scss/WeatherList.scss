@@ -74,14 +74,10 @@ td:first-of-type, td:first-of-type {
 .rowFont {
   font-size: 1.5em;
 }
+
 .mapBox {
-  display:flex;
+  display: flex;
   justify-content: center;
-  div:hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-  }
 }
 
 

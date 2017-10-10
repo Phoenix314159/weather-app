@@ -9,7 +9,7 @@ export class MapContainer extends Component {
             width: '275px',
             border: '2px solid black',
             borderRadius: '8pt'
-        }
+        };
         return (
             <Map google={this.props.google}
                  zoom={12}
@@ -19,9 +19,8 @@ export class MapContainer extends Component {
                      lat: this.props.lat,
                      lng: this.props.lon
                  }}
-            >
-                <Marker
-                    position={{lat: this.props.lat, lng: this.props.lon}}/>
+                 clickableIcons={false}>
+                <Marker position={{lat: this.props.lat, lng: this.props.lon}}/>
             </Map>
         );
     }

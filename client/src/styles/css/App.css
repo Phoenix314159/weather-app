@@ -67,10 +67,6 @@ td:first-of-type > div, td:first-of-type > div {
 .mapBox {
   display: flex;
   justify-content: center; }
-  .mapBox div:hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05); }
 
 body {
   background-image: url("../../imgs/sky-2.jpg");
