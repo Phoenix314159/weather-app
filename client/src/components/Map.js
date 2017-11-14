@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import api_key from '../config';
+import apiKey from '../config';
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 export class MapContainer extends Component {
@@ -10,23 +10,24 @@ export class MapContainer extends Component {
             border: '2px solid black',
             borderRadius: '8pt'
         };
+        const {lat, lon, google} = this.props
         return (
-            <Map google={this.props.google}
+            <Map google={google}
                  zoom={12}
                  className="animated lightSpeedIn"
                  style={style}
                  initialCenter={{
-                     lat: this.props.lat,
-                     lng: this.props.lon
+                     lat,
+                     lng: lon
                  }}
                  clickableIcons={false}>
-                <Marker position={{lat: this.props.lat, lng: this.props.lon}}/>
+                <Marker position={{lat, lng: lon}}/>
             </Map>
         );
     }
 }
 
 export default GoogleApiWrapper({
-    apiKey: api_key
+    apiKey
 })(MapContainer)
 

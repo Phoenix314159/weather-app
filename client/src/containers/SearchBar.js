@@ -4,8 +4,8 @@ import {bindActionCreators} from 'redux';
 import {fetchWeatherData} from '../actions';
 
 class SearchBar extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {term: ''};
         this.onInputChange = this.onInputChange.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -22,12 +22,13 @@ class SearchBar extends Component {
     }
 
     render() {
+        const {term} = this.state
         return (
             <form onSubmit={this.onFormSubmit} className="input-group">
                 <input
                     placeholder="Enter a city name"
                     className="form-control centerInput"
-                    value={this.state.term}
+                    value={term}
                     onChange={this.onInputChange}
                 />
             </form>

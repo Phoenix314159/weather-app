@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DeleteRow = props => {
+const DeleteRow = ({deleteRow, index}) => {
 
     this.renderLastRow = () => {
         return (
             <button className="animated fadeIn btn btn-danger button1"
-                    onClick={() => {props.delete(props.index)}}>
+                    onClick={() => {deleteRow(index)}}>
                 X</button>
         )
     }

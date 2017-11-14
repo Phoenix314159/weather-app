@@ -1,10 +1,11 @@
-const config = require('../config/config'),
+const {url} = require('../config/config'),
     axios = require('axios');
 
 module.exports = app => {
 
     app.get('/api/weather', async (req, res) => {
-        let response = await axios.get(`${config.url}&q=${req.query.q},us`);
-        res.status(200).send(response.data)
+        const {query: {q}} = req
+        const resp = await axios.get(`${url}&q=${q},us`);
+        res.status(200).send(resp.data)
     })
 };
