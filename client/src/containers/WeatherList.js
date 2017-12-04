@@ -8,13 +8,8 @@ import { connect } from 'react-redux'
 import { deleteRow } from '../actions'
 
 class WeatherList extends Component {
-  constructor (props) {
-    super(props)
-    this.renderHead = this.renderHead.bind(this)
-    this.renderBody = this.renderBody.bind(this)
-  }
 
-  renderHead () {
+  renderHead = () => {
     const {weather} = this.props
     if (weather.length !== 0) {
       return (
@@ -23,7 +18,7 @@ class WeatherList extends Component {
     }
   }
 
-  renderBody (cityData, index) {
+  renderBody = (cityData, index) => {
 
     const deleteRow = index => {
         this.props.deleteRow(index)

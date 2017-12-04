@@ -1,5 +1,6 @@
 import React from 'react';
-import {Sparklines, SparklinesLine, SparklinesBars, SparklinesReferenceLine, SparklinesSpots} from 'react-sparklines';
+import {Sparklines, SparklinesLine, SparklinesBars,
+        SparklinesReferenceLine, SparklinesSpots} from 'react-sparklines';
 
 export default ({data, color, average}) => {
     return (
