@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Thead = () => (
-
+export default () => (
   <tr className="rowFont">
     <th className="animated slideInLeft city">City</th>
     <th className="animated slideInLeft">Temperature (°)</th>
@@ -11,4 +10,4 @@ const Thead = () => (
   </tr>
 )
 
-export default Thead
+

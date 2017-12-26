@@ -1,14 +1,18 @@
-import {types} from '../actions/types';
-const weatherReducer = (state = [], action) => {
+import { types } from '../actions/types'
 
-    switch (action.type) {
-        case types.FETCH_WEATHER:
-            return [action.payload.data, ...state];
-        case types.DELETE_ROW:
-            return state.filter((item, index) => index !== action.payload);
-        default:
-            return state;
+export default (state = [], action) => {
+  const {type} = action
+  switch (type) {
+    case types.FETCH_WEATHER: {
+      const {payload: {data}} = action
+      return {...state, data}
     }
-};
+    case types.DELETE_ROW: {
+      const {payload} = action
+      return state.filter((item, index) => index !== payload)
+    }
+    default:
+      return state
+  }
+}
 
-export default weatherReducer;

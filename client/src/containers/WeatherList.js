@@ -52,6 +52,7 @@ class WeatherList extends Component {
 
   render () {
     const {weather} = this.props
+    console.log(weather)
     return (
       <table className="table table-hover" id="table1">
         <thead>
@@ -65,13 +66,12 @@ class WeatherList extends Component {
   }
 }
 
-const mapStateToProps = ({weather}) => {
-  return {weather}
-}
-const mapDispatchToProps = dispatch => {
-  return {
+const mapStateToProps = ({weather}) => ({weather})
+
+const mapDispatchToProps = dispatch => (
+  {
     deleteRow: index => dispatch(deleteRow(index))
   }
-}
+)
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherList)
